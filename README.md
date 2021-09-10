@@ -1,4 +1,4 @@
-# firefox Sync Server Docker Container
+# Firefox Sync Server Docker Container
 
 ## Tonton Jo - 2021
 Join me on Youtube: https://www.youtube.com/c/tontonjo
