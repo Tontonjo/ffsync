@@ -26,7 +26,7 @@ docker run -d -p 5000:5000 --name ffsync \
   -e PGID=100 \
   -e FF_SYNCSERVER_SECRET="$secret" \
   -e FF_SYNCSERVER_FORWARDED_ALLOW_IPS=* \
-  -e FF_SYNCSERVER_PUBLIC_URL=http://fqdn.to.server \
+  -e FF_SYNCSERVER_PUBLIC_URL=http://fqdn.to.server:5000 \
   -v /path/to/ffsync/:/data \
   crazymax/firefox-syncserver:latest
   ``` 
@@ -35,4 +35,4 @@ enter this url in firefox: about:config
 
 Edit identity.sync.tokenserver.uri
 from: https://token.services.mozilla.com/1.0/sync/1.5
-to: http://fqdn.to.server/token/1.0/sync/1.5
+to: http://fqdn.to.server:5000/token/1.0/sync/1.5
