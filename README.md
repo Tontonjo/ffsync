@@ -31,10 +31,9 @@ docker run -d -p 5000:5000 --name ffsync \
   crazymax/firefox-syncserver:latest
   ``` 
 ## Firefox configuration:
-enter this url in firefox: about:config
-
-Edit identity.sync.tokenserver.uri
-from: https://token.services.mozilla.com/1.0/sync/1.5
+enter this url in firefox: about:config  
+Edit identity.sync.tokenserver.uri  
+from: https://token.services.mozilla.com/1.0/sync/1.5  
 to: http://fqdn.to.server:5000/token/1.0/sync/1.5
 
 ## Control:
