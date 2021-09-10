@@ -36,3 +36,19 @@ enter this url in firefox: about:config
 Edit identity.sync.tokenserver.uri
 from: https://token.services.mozilla.com/1.0/sync/1.5
 to: http://fqdn.to.server:5000/token/1.0/sync/1.5
+
+## Control:
+```shell
+docker logs -f ffsync
+```  
+try to start a sync  if nothing move:  
+- Else you're all good
+- Else your Firefox cant reach your server and you should control your network / DNS settings
+
+if you get this error in log, ensure application URL match Public URL
+```
+ERROR:syncserver:The public_url setting doesn't match the application url.
+This will almost certainly cause authentication failures!
+    public_url setting is: http://localhost:5000
+    application url is:    http://fqdn.to.server:5000
+```
